@@ -24,8 +24,7 @@ import { GirlState } from './girl';
     NgxsLoggerPluginModule.forRoot(),
     NgxsReduxDevtoolsPluginModule.forRoot(),
     NgxsModule.forRoot([
-      TutorialState,
-      GirlState
+      TutorialState
     ]),
     GirlModule
   ],

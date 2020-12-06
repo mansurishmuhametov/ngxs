@@ -2,7 +2,9 @@
     <h3>Tutorial</h3>
     <ul>
         <li *ngFor="let item of (list$ | async)">
-            {{ item.name }}
+            Name: {{ item.name }}
+            <br/>
+            Url: {{ item.url }}
         </li>
     </ul>
 </div>

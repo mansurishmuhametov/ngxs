@@ -1,6 +1,16 @@
-<div>
+<div *ngIf="!isDestroy">
     <ul>
         <li *ngFor="let item of (girlList$ | async)">
+            Name: {{ item.name }}
+            <br/>
+            Age: {{ item.age }}
+        </li>
+    </ul>
+    <div *ngIf="(filterAge$ | async)">
+        Filter Age: {{ filterAge$ | async }}
+    </div>
+    <ul>
+        <li *ngFor="let item of (girlListFilteredByAge$ | async)">
             Name: {{ item.name }}
             <br/>
             Age: {{ item.age }}

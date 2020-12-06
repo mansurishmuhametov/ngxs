@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { Select, Store } from '@ngxs/store';
-import { Observable, of } from 'rxjs';
+import { Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
 import { RemoveTutorial } from '../actions/tutorial.action';
 
 import { Tutorial } from '../models/tutorial.mode';
-import { TutorialState } from '../state/tutorial.state';
 
 @Component({
   selector: 'app-read',
@@ -17,7 +16,7 @@ export class ReadComponent {
   constructor(
     private readonly store: Store
   ) {
-    this.list$ = this.store.select(state => state.list.list);
+    this.list$ = this.store.select(state => state.tutorials.list);
   }
 
   deleteTutorial(name: string): void {
